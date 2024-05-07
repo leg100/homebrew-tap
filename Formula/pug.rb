@@ -5,20 +5,20 @@
 class Pug < Formula
   desc "Terminal user interface for terraform power users."
   homepage "https://github.com/leg100/pug"
-  version "0.1.8"
+  version "0.1.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/leg100/pug/releases/download/v0.1.8/pug_0.1.8_darwin_amd64.zip"
-      sha256 "a957fbeeed5d8740687e42de033e65fa68387653fd929779c58e6d46d43816d2"
+      url "https://github.com/leg100/pug/releases/download/v0.1.9/pug_0.1.9_darwin_amd64.zip"
+      sha256 "8d289e953bb3a80366c34c37085b2ed8aba9a4c2beaf6cfd13c720e275ca0dff"
 
       def install
         bin.install "pug"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/leg100/pug/releases/download/v0.1.8/pug_0.1.8_darwin_arm64.zip"
-      sha256 "59c9e29322f9dd9b45fcd680d4ede5824e46c4962b65944f743d5251f4a92812"
+      url "https://github.com/leg100/pug/releases/download/v0.1.9/pug_0.1.9_darwin_arm64.zip"
+      sha256 "5f4c4edffb1f16ffc260edf9f08aa5ed3893573282330554cf108c1d55c7420a"
 
       def install
         bin.install "pug"
@@ -28,16 +28,16 @@ class Pug < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/leg100/pug/releases/download/v0.1.8/pug_0.1.8_linux_amd64.zip"
-      sha256 "9aa77f31c07b6a01048c25d1585c17b6a65e0512405a07fe204a6d180b9889d4"
+      url "https://github.com/leg100/pug/releases/download/v0.1.9/pug_0.1.9_linux_amd64.zip"
+      sha256 "1c0315236388a57d2fbba6c89c7e1bbc1e92fa9484f14b77e4f00f369a41c43a"
 
       def install
         bin.install "pug"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/leg100/pug/releases/download/v0.1.8/pug_0.1.8_linux_arm64.zip"
-      sha256 "846897e8f3f2e6b4b78799937140514982002435d6a31fc925c76210e467d36b"
+      url "https://github.com/leg100/pug/releases/download/v0.1.9/pug_0.1.9_linux_arm64.zip"
+      sha256 "d0a576b1b5064836db295f0eb019eb0be0e9534f54875c77c0f778ccb8404ba6"
 
       def install
         bin.install "pug"
