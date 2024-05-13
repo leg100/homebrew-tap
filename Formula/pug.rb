@@ -5,20 +5,20 @@
 class Pug < Formula
   desc "Terminal user interface for terraform power users."
   homepage "https://github.com/leg100/pug"
-  version "0.1.10"
+  version "0.1.11"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/leg100/pug/releases/download/v0.1.10/pug_0.1.10_darwin_amd64.zip"
-      sha256 "5ccf36024cac3fa72444ffba6c0d8271ce16493ff94b282f7fcbffefcb574584"
+    on_intel do
+      url "https://github.com/leg100/pug/releases/download/v0.1.11/pug_0.1.11_darwin_amd64.zip"
+      sha256 "594a6547f7319a35b6865fea9d4d0054ef45dcaf96b32dfd7b9ca88db7a7a107"
 
       def install
         bin.install "pug"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/leg100/pug/releases/download/v0.1.10/pug_0.1.10_darwin_arm64.zip"
-      sha256 "5c06593154130f42292c936d5ad1beb367f5f6fee639dfd1e7d3d492c9a55c80"
+    on_arm do
+      url "https://github.com/leg100/pug/releases/download/v0.1.11/pug_0.1.11_darwin_arm64.zip"
+      sha256 "49b0a7b7f46c51fa7073a4cf0158dbee4d53bdcda54d67445f8fa150bad2cda4"
 
       def install
         bin.install "pug"
@@ -27,20 +27,24 @@ class Pug < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/leg100/pug/releases/download/v0.1.10/pug_0.1.10_linux_amd64.zip"
-      sha256 "4db2e68589e9682625cd24a5cc64dd9df09325f49297d31991833a5d54c816a9"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/leg100/pug/releases/download/v0.1.11/pug_0.1.11_linux_amd64.zip"
+        sha256 "504add2a44b0c797feeb60719e255054cb272dd5606e2789ae46f3fbf3055dbe"
 
-      def install
-        bin.install "pug"
+        def install
+          bin.install "pug"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/leg100/pug/releases/download/v0.1.10/pug_0.1.10_linux_arm64.zip"
-      sha256 "c61b7b6928bbc12979c130f40a359f838e39ae8ece350aab6fca097a36dbd555"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/leg100/pug/releases/download/v0.1.11/pug_0.1.11_linux_arm64.zip"
+        sha256 "27bc95202df002f5f219d42e9147f5febf92656030ee60698a993c3a72657f68"
 
-      def install
-        bin.install "pug"
+        def install
+          bin.install "pug"
+        end
       end
     end
   end
