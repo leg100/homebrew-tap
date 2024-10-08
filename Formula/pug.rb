@@ -5,20 +5,20 @@
 class Pug < Formula
   desc "Terminal user interface for terraform power users."
   homepage "https://github.com/leg100/pug"
-  version "0.5.4"
+  version "0.5.5"
 
   on_macos do
     on_intel do
-      url "https://github.com/leg100/pug/releases/download/v0.5.4/pug_0.5.4_darwin_amd64.zip"
-      sha256 "64de379f0066f60fea2c493bd8729a29ff76ea0a877defe46b35085db34aa50c"
+      url "https://github.com/leg100/pug/releases/download/v0.5.5/pug_0.5.5_darwin_amd64.zip"
+      sha256 "d27532eac4a0b0c568a3fee0b840addf4af74a4feda08bc3b8d143938fa89ba7"
 
       def install
         bin.install "pug"
       end
     end
     on_arm do
-      url "https://github.com/leg100/pug/releases/download/v0.5.4/pug_0.5.4_darwin_arm64.zip"
-      sha256 "3e4c0e0fe5693927b85f54d3a2121b3c751b2fd227b5b69e6ac1b2193e4b9749"
+      url "https://github.com/leg100/pug/releases/download/v0.5.5/pug_0.5.5_darwin_arm64.zip"
+      sha256 "20894f6e4db4fde4bad49a18439511d48da79aab3c6b065cffe223cfc29ee2a3"
 
       def install
         bin.install "pug"
@@ -29,8 +29,8 @@ class Pug < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/leg100/pug/releases/download/v0.5.4/pug_0.5.4_linux_amd64.zip"
-        sha256 "7ade2f267e08f952d2c8c653f1d32867927c2e788db20bc0078384cbc32b6abd"
+        url "https://github.com/leg100/pug/releases/download/v0.5.5/pug_0.5.5_linux_amd64.zip"
+        sha256 "de1f6e0c76b8a024875155a9cb3adc08fd8eaa5bdc374579e08a4c224de37eb0"
 
         def install
           bin.install "pug"
@@ -39,8 +39,8 @@ class Pug < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/leg100/pug/releases/download/v0.5.4/pug_0.5.4_linux_arm64.zip"
-        sha256 "8983ba8a79836696ed96ee4553f564f7aae7ca68a48ab9eb9d2d47a8fad324d9"
+        url "https://github.com/leg100/pug/releases/download/v0.5.5/pug_0.5.5_linux_arm64.zip"
+        sha256 "ee185635f0e2063d56c11ed182e24df0423130ba02ffc0fcfae547a9f581ece2"
 
         def install
           bin.install "pug"
